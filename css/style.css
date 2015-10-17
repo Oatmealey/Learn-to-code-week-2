@@ -9,3 +9,10 @@
     height: 100px;
     display: inline-block;
 }
+
+.rpsbkg { 
+    background-image: url('http://advisoranalyst.advisoranalystgr.netdna-cdn.com/wp-content/uploads/2014/05/thumb_6917_rockpaperscissors.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

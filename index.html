@@ -4,7 +4,11 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script>
 
-    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    // src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+
+    var userName = prompt("Give me your name?");
+
+    var userChoice = prompt("Choose your poison rock, paper or scissors?");
 
     var computerChoice = Math.random();
 
@@ -19,36 +23,39 @@
     var compare = function(userChoice, computerChoice) {
         if (userChoice  === computerChoice) {
               window.alert("The result is a tie!");
-          } else if(userChoice ==="rock") {
-            if (computerChoice==="scissors") {
+          } else if(userChoice === "rock") {
+            if (computerChoice === "scissors") {
 
-                window.alert("Rock wins!");
+                window.alert(userName + " wins!");
           } else {
-                window.alert("Paper wins");
+                window.alert("Computer kicked your ass!");
               }
           }
-          else if(userChoice==="paper") {
-             if(computerChoice ==="rock") {
-                 window.alert("paper wins!");
+          else if(userChoice === "paper") {
+             if(computerChoice === "rock") {
+                 window.alert(userName + " wins!");
              } else {
-                 window.alert("scissors wins!");
+                 window.alert("Computer kicked your ass!");
              }
           }
 
-          else if(userChoice==="scissors") {
-              if (computerChoice==="rock") {
-                  window.alert("scissors wins!");
+          else if(userChoice === "scissors") {
+              if (computerChoice === "rock") {
+                  window.alert(userName + " wins!");
               } else {
-                  window.alert("scissors wins");
+                  window.alert("Computer kicked your ass!");
               }
           }
       };
     </script>
   </head>
-  <body>
+  <body class="rpsbkg">
     <div class="wrapper">
-      <button class="button" onclick="compare(userChoice, computerChoice);">LETS PLAY RPS!</button>
-    </div>
+      <button class="button" onclick="compare(userChoice, computerChoice);">PLAY!</button>
+        <br>
+        <br>
+        <button onclick="window.location.reload()">Play Again!</button>
+  </div>
   </body>
 
 </html>
